@@ -1,0 +1,2 @@
+# SimplePlayerSettingData
+practice with MINIJSON
