@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TempSetting;
 using UnityEngine;
 
 public class SaveTester : MonoBehaviour
@@ -30,8 +31,8 @@ public class SaveTester : MonoBehaviour
     {
         m_logTMP.SetText("ResetConfigs");
         m_data = new SettingDataA(0, 0);
-        m_languageDropDownItem.SetData((int)m_data.Language);
-        m_volumeItem.SetData(m_data.Volume);
+        //m_languageDropDownItem.SetData((int)m_data.Language);
+        //m_volumeItem.SetData(m_data.Volume);
     }
 
     public void LoadConfigs()
@@ -42,8 +43,8 @@ public class SaveTester : MonoBehaviour
             m_data = (SettingDataA)SettingDataA.GetDefaultSetting();
         else
             m_data = data;
-        m_languageDropDownItem.SetData((int)m_data.Language);
-        m_volumeItem.SetData(m_data.Volume);
+        //m_languageDropDownItem.SetData((int)m_data.Language);
+        //m_volumeItem.SetData(m_data.Volume);
     }
 
     public void SaveConfigs()
@@ -68,8 +69,8 @@ public class SaveTester : MonoBehaviour
         m_data = LocalSaveManager.TempLoad<SettingDataA>();
         if (null == m_data)
             m_data = (SettingDataA)SettingDataA.GetDefaultSetting();
-        m_languageDropDownItem.SetUp("Language", SettingDataA.TypeOfLanguageType, (int)m_data.Language);
-        m_volumeItem.SetUp("Volume", m_data.Volume);
+        //m_languageDropDownItem.SetUp("Language", SettingDataA.TypeOfLanguageType, (int)m_data.Language);
+        //m_volumeItem.SetUp("Volume", m_data.Volume);
     }
 
     void OnEnable()
