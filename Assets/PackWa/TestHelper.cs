@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TempSetting;
 using UnityEngine;
 
 public class TestHelper : MonoBehaviour
